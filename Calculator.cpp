@@ -4,7 +4,7 @@ using namespace std;
 long double addition(long double num1, long double num2)
 {
 
-    return num1 + num2;
+   return num1 + num2;
 }
 
 int main()
@@ -18,7 +18,11 @@ int main()
     cout << "Input second number: ";
     cin >> num2;
 
-    cout << num1 << " + " << num2 << " = " << addition(num1, num2) << endl;
-    
+    cout << "test";
+
+    cout << num1 << " + " << num2 << " = " << (addition(num1, num2)) << endl;
+
+    cout << "Play again?" << endl;
+
     return 0;
 }

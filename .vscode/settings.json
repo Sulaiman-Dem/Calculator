@@ -1,0 +1,12 @@
+{
+  "C_Cpp.errorSquiggles": "Disabled",
+  "files.associations": {
+    "iostream": "cpp",
+    "array": "cpp",
+    "string_view": "cpp",
+    "initializer_list": "cpp",
+    "utility": "cpp",
+    "ostream": "cpp"
+  },
+  "cSpell.words": ["Pseudocode"]
+}
