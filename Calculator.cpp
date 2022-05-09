@@ -18,8 +18,6 @@ int main()
     cout << "Input second number: ";
     cin >> num2;
 
-    cout << "test";
-
     cout << num1 << " + " << num2 << " = " << (addition(num1, num2)) << endl;
 
     cout << "Play again?" << endl;
