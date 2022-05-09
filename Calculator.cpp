@@ -18,6 +18,7 @@ int main()
     cout << "Input second number: ";
     cin >> num2;
 
-    addition(num1, num2);
+    cout << num1 << " + " << num2 << " = " << addition(num1, num2) << endl;
+    
     return 0;
 }
