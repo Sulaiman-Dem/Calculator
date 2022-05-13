@@ -13,7 +13,7 @@
 
 ##### Functions :
 
-1. Functions that calculate multiplication1, division2, subtraction3, addition4 and modulus5
+1. Functions that calculate multiplication1, division2, subtraction3, addition4 and modulus5 with two options of calculator so it includes modulus for non-decimal places
 2. A input checking function(cin.ignore) that forces user to only use integer inputs
 3. Two functions that asks for user's inputs numFirst && numSecond
 4. A function that shows the equation
