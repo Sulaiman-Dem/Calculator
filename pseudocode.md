@@ -4,6 +4,7 @@
 
 ### User Interface =
 
+0. Make a choice function for user to choose whether they want decimal places or not
 1. Ask the user for two numbers they want to use
 2. If the user input the wrong type of input ask to try again with only saying number inputs only
 3. Then ask the user what operation they want to perform with the two selected numbers
@@ -17,6 +18,7 @@
 2. A input checking function(cin.ignore) that forces user to only use integer inputs
 3. Two functions that asks for user's inputs numFirst && numSecond
 4. A function that shows the equation
+5. Make a choice function for user to choose whether they want decimal places or not
 
 ##### Int main () :
 
