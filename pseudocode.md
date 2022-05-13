@@ -15,12 +15,13 @@
 
 1. Functions that calculate multiplication1, division2, subtraction3, addition4 and modulus5
 2. A input checking function(cin.ignore) that forces user to only use integer inputs
-3. Function that asks for user's two inputs
+3. Two functions that asks for user's inputs numFirst && numSecond
 4. A function that shows the equation
 
 ##### Int main () :
 
 1. A presentation of what the program is used for
-2. Ask user for two input number #1 and number #2
+2. Ask user for two inputs number #1 and number #2
 3. Then a list of options toward what operation they want to use
-4. Then the option to continue using program or exit
+4. Show answer
+5. Then the option to continue using program or exit
