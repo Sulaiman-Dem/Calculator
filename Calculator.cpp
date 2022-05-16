@@ -23,28 +23,27 @@ double additionDouble(const double numFirstDouble, const double numSecondDouble)
     return numFirstDouble + numSecondDouble;
 }
 
-// 1 int
-int multiplicationInt(const int numFirst, const int numSecond)
+int multiplicationInt(const int numFirst, const int numSecond) // 1 int
 {
     return numFirst * numSecond;
 }
-// 2 int
-int divisionInt(const int numFirst, const int numSecond)
+
+int divisionInt(const int numFirst, const int numSecond) // 2 int
 {
     return numFirst / numSecond;
 }
-// 3 int
-int subtractionInt(const int numFirst, const int numSecond)
+
+int subtractionInt(const int numFirst, const int numSecond) // 3 int
 {
     return numFirst - numSecond;
 }
-// 4 int
-int additionInt(const int numFirst, const int numSecond)
+
+int additionInt(const int numFirst, const int numSecond) // 4 int
 {
     return numFirst + numSecond;
 }
-// 5 int
-int modulusInt(const int numFirst, const int numSecond)
+
+int modulusInt(const int numFirst, const int numSecond) // 5 int
 {
     return numFirst % numSecond;
 }
@@ -52,6 +51,18 @@ int modulusInt(const int numFirst, const int numSecond)
 int calculatorOption()
 {
     int calculatorOptions;
+    cout << "\nWhat would like to use?" << endl
+         << "(1) for Decimal Places" << endl
+         << "(2) for Whole Numbers" << endl
+         << "Input Choice here: ";
+
+    while (!(cin >> calculatorOptions) || (calculatorOptions < 1 || calculatorOptions > 2))
+    {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "\nInvalid Option." << endl
+             << "Input Choice Here: ";
+    }
 
     return calculatorOptions;
 }
@@ -114,7 +125,7 @@ double getUserOptionNumSecondDouble()
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "\nInvalid Input";
-            cout << "\nTry again! (First Number): ";
+            cout << "\nTry again! (Second Number): ";
             cin >> numSecondDouble;
         }
         else
@@ -136,7 +147,7 @@ int getUserOptionNumSecondInt()
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "\nInvalid Input";
-            cout << "\nTry again! (First Number): ";
+            cout << "\nTry again! (Second Number): ";
             cin >> numSecondInt;
         }
         else
@@ -146,7 +157,7 @@ int getUserOptionNumSecondInt()
 
 double userOptionsListDouble()
 {
-    double userSelectedOption;
+    double userSelectedOptionDouble;
     cout << "\nWhat would you like to do?" << endl
          << "(1) for Multiplication" << endl
          << "(2) for Division" << endl
@@ -154,7 +165,7 @@ double userOptionsListDouble()
          << "(4) for Addition" << endl
          << "Input Choice here: ";
 
-    while (!(cin >> userSelectedOption) || (userSelectedOption < 1 || userSelectedOption > 4)) // Forces user to only put numbers between 1 to 4
+    while (!(cin >> userSelectedOptionDouble) || (userSelectedOptionDouble < 1 || userSelectedOptionDouble > 4)) // Forces user to only put numbers between 1 to 4
     {
 
         cin.clear();
@@ -162,12 +173,12 @@ double userOptionsListDouble()
         cout << "\nInvalid Input";
         cout << "\nInput Choice here: ";
     }
-    return userSelectedOption;
+    return userSelectedOptionDouble;
 }
 
 int userOptionsListInt()
 {
-    int userSelectedOption;
+    int userSelectedOptionInt;
     cout << "\nWhat would you like to do?" << endl
          << "(1) for Multiplication" << endl
          << "(2) for Division" << endl
@@ -176,7 +187,7 @@ int userOptionsListInt()
          << "(5) for Modulus" << endl
          << "Input Choice here: ";
 
-    while (!(cin >> userSelectedOption) || (userSelectedOption < 1 || userSelectedOption > 5)) // Forces user to only put numbers between 1 to 5
+    while (!(cin >> userSelectedOptionInt) || (userSelectedOptionInt < 1 || userSelectedOptionInt > 5)) // Forces user to only put numbers between 1 to 5
     {
 
         cin.clear();
@@ -184,7 +195,7 @@ int userOptionsListInt()
         cout << "\nInvalid Input";
         cout << "\nInput Choice here: ";
     }
-    return userSelectedOption;
+    return userSelectedOptionInt;
 }
 
 void showEquationDouble(const double numFirstDouble, const double numSecondDouble, const double userSelectedOption)
@@ -249,13 +260,27 @@ int main()
     cout << "\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
 
     double numFirstDouble, numSecondDouble;
-    double userSelectedOption;
+    int numFirstInt, numSecondInt;
+    double userSelectedOptionint, userSelectedOptionDouble;
+    int calculatorUserOptions;
 
-    numFirstDouble = getUserOptionNumFirstDouble();
-    numSecondDouble = getUserOptionNumSecondDouble();
-    userSelectedOption = userOptionsListDouble();
+    calculatorUserOptions = calculatorOption();
 
-    showEquationDouble(numFirstDouble, numSecondDouble, userSelectedOption);
+    if (calculatorUserOptions == 1) // Doubles
+    {
+        numFirstDouble = getUserOptionNumFirstDouble();
+        numSecondDouble = getUserOptionNumSecondDouble();
+        userSelectedOptionDouble = userOptionsListDouble();
+        showEquationDouble(numFirstDouble, numSecondDouble, userSelectedOptionDouble);
+    }
+
+    if (calculatorUserOptions == 2) // Ints
+    {
+        numFirstInt = getUserOptionNumFirstInt();
+        numSecondInt = getUserOptionNumSecondInt();
+        userSelectedOptionint = userOptionsListInt();
+        showEquationInt(numFirstInt, numSecondInt, userSelectedOptionint);
+    }
 
     int userDecision;
     int loopUserDecision;
@@ -266,11 +291,22 @@ int main()
     {
         if (userDecision == 1)
         {
-            numFirstDouble = getUserOptionNumFirstDouble();
-            numSecondDouble = getUserOptionNumSecondDouble();
-            userSelectedOption = userOptionsListDouble();
+            calculatorUserOptions = calculatorOption();
+            if (calculatorUserOptions == 1) // Doubles
+            {
+                numFirstDouble = getUserOptionNumFirstDouble();
+                numSecondDouble = getUserOptionNumSecondDouble();
+                userSelectedOptionDouble = userOptionsListDouble();
+                showEquationDouble(numFirstDouble, numSecondDouble, userSelectedOptionDouble);
+            }
 
-            showEquationDouble(numFirstDouble, numSecondDouble, userSelectedOption);
+            if (calculatorUserOptions == 2) // Ints
+            {
+                numFirstInt = getUserOptionNumFirstInt();
+                numSecondInt = getUserOptionNumSecondInt();
+                userSelectedOptionint = userOptionsListInt();
+                showEquationInt(numFirstInt, numSecondInt, userSelectedOptionint);
+            }
             cout << "\nWould you like to use the caluclator again? *(1) for yes or enter anything for no: ";
             cin >> userDecision;
         }
@@ -284,3 +320,7 @@ int main()
         }
     }
 }
+
+// todo - Maybe make two different types of calculators where you use modulus and other calculation.
+// todo - Make a choice function for user to choose whether they want decimal places or not
+// todo -
