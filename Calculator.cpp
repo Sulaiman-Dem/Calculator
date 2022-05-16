@@ -320,7 +320,3 @@ int main()
         }
     }
 }
-
-// todo - Maybe make two different types of calculators where you use modulus and other calculation.
-// todo - Make a choice function for user to choose whether they want decimal places or not
-// todo -
