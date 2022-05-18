@@ -284,7 +284,7 @@ int main()
 
     int userDecision;
     int loopUserDecision;
-    cout << "\nWould you like to use the caluclator again? *(1) for yes or enter anything for no: ";
+    cout << "\nWould you like to use the calculator again? *(1) for yes or enter anything for no: ";
     cin >> userDecision;
 
     for (loopUserDecision = 0; userDecision != 10000; loopUserDecision++)
@@ -307,7 +307,7 @@ int main()
                 userSelectedOptionint = userOptionsListInt();
                 showEquationInt(numFirstInt, numSecondInt, userSelectedOptionint);
             }
-            cout << "\nWould you like to use the caluclator again? *(1) for yes or enter anything for no: ";
+            cout << "\nWould you like to use the calculator again? *(1) for yes or enter anything for no: ";
             cin >> userDecision;
         }
         else
