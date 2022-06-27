@@ -32,3 +32,5 @@
 
 1. Figuring out how to implement modulus into this program.
 1. Solution = So I came up with the idea of have two separate calculators for whole numbers and decimal numbers
+1. Had an issue with the "while" loop of whether the user wants to continue using the calculator since it was in the int main()
+1. I created a separate function for the while loop and made it so that the function would equal the userDecision and now it works perfectly
