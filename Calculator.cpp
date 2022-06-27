@@ -261,7 +261,7 @@ int main()
 
     double numFirstDouble, numSecondDouble;
     int numFirstInt, numSecondInt;
-    double userSelectedOptionint, userSelectedOptionDouble;
+    double userSelectedOptionInt, userSelectedOptionDouble;
     int calculatorUserOptions;
 
     calculatorUserOptions = calculatorOption();
@@ -278,8 +278,8 @@ int main()
     {
         numFirstInt = getUserOptionNumFirstInt();
         numSecondInt = getUserOptionNumSecondInt();
-        userSelectedOptionint = userOptionsListInt();
-        showEquationInt(numFirstInt, numSecondInt, userSelectedOptionint);
+        userSelectedOptionInt = userOptionsListInt();
+        showEquationInt(numFirstInt, numSecondInt, userSelectedOptionInt);
     }
 
     int userDecision;
@@ -304,8 +304,8 @@ int main()
             {
                 numFirstInt = getUserOptionNumFirstInt();
                 numSecondInt = getUserOptionNumSecondInt();
-                userSelectedOptionint = userOptionsListInt();
-                showEquationInt(numFirstInt, numSecondInt, userSelectedOptionint);
+                userSelectedOptionInt = userOptionsListInt();
+                showEquationInt(numFirstInt, numSecondInt, userSelectedOptionInt);
             }
             cout << "\nWould you like to use the calculator again? *(1) for yes or enter anything for no: ";
             cin >> userDecision;
