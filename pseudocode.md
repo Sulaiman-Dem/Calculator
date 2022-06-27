@@ -31,4 +31,4 @@
 ### Issue
 
 1. Figuring out how to implement modulus into this program.
-1. Solution = So I came up with the idea of having two separate calculators for whole numbers and decimal numbers
+1. Solution = So I came up with the idea of have two separate calculators for whole numbers and decimal numbers
