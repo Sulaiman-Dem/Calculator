@@ -27,3 +27,8 @@
 3. Then a list of options toward what operation they want to use
 4. Show answer
 5. Then the option to continue using program or exit
+
+### Issue
+
+1. Figuring out how to implement modulus into this program.
+1. Solution = So I came up with the idea of having two separate calculators for whole numbers and decimal numbers
