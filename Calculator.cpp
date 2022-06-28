@@ -266,6 +266,7 @@ public:
     }
 };
 
+// This function is a while loop that allows infinite usages of the program until the user is finished
 int userDecisionLoop()
 {
     int userDecision;
