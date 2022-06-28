@@ -340,9 +340,9 @@ int main()
 
             std::cout << "\nWould you like to use the calculator again? *(1) for yes or *(0) no: ";
             std::cin >> userDecision;
-        } // This will end program and while loop
+        }
     }
-
+    // This will end program and while loop
     if (userDecision == 0)
     {
         {
