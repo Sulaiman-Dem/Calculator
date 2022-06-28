@@ -4,33 +4,40 @@
 
 ### User Interface =
 
-0. Make a choice function for user to choose whether they want decimal places or not
-1. Ask the user for two numbers they want to use
-2. If the user input the wrong type of input ask to try again with only saying number inputs only
-3. Then ask the user what operation they want to perform with the two selected numbers
-4. Then ask the user if they want to try again if not a good bye message
+0. The user must choose between whole numbers and decimal numbers
+1. The user must input their first number and second number into the program
+2. Then the user must select what operator they want to use from the list
+3. The user will choose to use the program again or end it
 
 ### Code Interface =
 
 ##### Functions :
 
-1. Functions that calculate multiplication1, division2, subtraction3, addition4 and modulus5 with two options of calculator so it includes modulus for non-decimal places
-2. A input checking function(cin.ignore) that forces user to only use integer inputs
-3. Two functions that asks for user's inputs numFirst && numSecond
-4. A function that shows the equation
-5. Make a choice function for user to choose whether they want decimal places or not
+0. This function that allows the user to choose between decimal number or whole numbers
+1. A class (doubleCalculator) that contains the 4 similar member functions that multiple, divide, subtract and addition
+2. In class (doubleCalculator) the function that presents the equation setup for each operator and shows the answer for the user's input
+3. In class (doubleCalculator) this function asks the user for their first number input and it can't be anything but numbers
+4. In class (doubleCalculator) this function asks the user for their second number input and it can't be anything but numbers
+5. In class (doubleCalculator) this function allows the user to choose between the 4 options of operators
+6. A class (intCalculator) that contains the 5 similar member functions that multiple, divide, subtract, addition and modulus
+7. A class (intCalculator) the function that presents the equation setup for each operator and shows the answer for the user's input
+8. A class (intCalculator) this function asks the user for their first number input and it can't be anything but numbers
+9. A class (intCalculator) this function asks the user for their second number input and it can't be anything but numbers
+10. A class (intCalculator) this function allows the user to choose between the 5 options of operators
+11. This function is a while loop that allows infinite usages of the program until the user is finished
 
 ##### Int main () :
 
-1. A presentation of what the program is used for
-2. Ask user for two inputs number #1 and number #2
-3. Then a list of options toward what operation they want to use
-4. Show answer
-5. Then the option to continue using program or exit
+0. Description of the program
+1. Declared variables needed for the program to run properly
+2. The function that allows the user to choose between decimal number or whole numbers
+3. Then depending on what they choose the Int(whole) or Double(decimal) will progress toward asking the user for 2 separate numbers
+4. Afterward the user is presented the list of operators and finally depending their choice the equation will be visual presented with the answer
+5. The loop function will trigger and ask the user if they want to use the calculator again if not the program will end
 
 ### Issue
 
 1. Figuring out how to implement modulus into this program.
-1. Solution = So I came up with the idea of have two separate calculators for whole numbers and decimal numbers
-1. Had an issue with the "while" loop of whether the user wants to continue using the calculator since it was in the int main()
-1. I created a separate function for the while loop and made it so that the function would equal the userDecision and now it works perfectly
+   Solution = So I came up with the idea of have two separate calculators for whole numbers and decimal numbers
+2. Had an issue with the "while" loop of whether the user wants to continue using the calculator since it was in the int main()
+   Solution = I created a separate function for the while loop and made it so that the function would equal the userDecision and now it works perfectly
