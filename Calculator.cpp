@@ -267,11 +267,17 @@ public:
 };
 
 // This function is a while loop that allows infinite usages of the program until the user is finished
-int userDecisionLoop()
+void userDecisionLoop()
 {
     int userDecision;
+    double numFirstDouble, numSecondDouble, userSelectedListDouble;
+    int numFirstInt, numSecondInt, userSelectedListInt;
+    int calculatorUserOptions;
 
-    std::cout << "\nWould you like to use the calculator again? *(1) for yes or *(0) no: ";
+    class doubleCalculator doubleCal;
+    class intCalculator intCal;
+
+    std::cout << "\nWould you like to use the calculator again? *(1) for yes or *(0) for no: ";
 
     // This will loop between the number 1 and 0 until the user chooses 0 to stop using the calculator
     while (!(std::cin >> userDecision) || (userDecision < 0) || (userDecision > 1))
@@ -281,7 +287,38 @@ int userDecisionLoop()
         std::cout << "\nInvalid Option." << std::endl
                   << "Input Choice Here: ";
     }
-    return userDecision;
+    if (userDecision == 1)
+    {
+        calculatorUserOptions = calculatorOption();
+        if (calculatorUserOptions == 1) // Doubles
+        {                               // Same progress as the first if statements
+            numFirstDouble = doubleCal.getUserInputFirstDouble();
+            numSecondDouble = doubleCal.getUserInputSecondDouble();
+            userSelectedListDouble = doubleCal.userOptionsListDouble();
+            doubleCal.showEquationDouble(numFirstDouble, numSecondDouble, userSelectedListDouble);
+
+            userDecisionLoop();
+        }
+
+        if (calculatorUserOptions == 2) // Ints
+        {                               // Same progress as the first if statements
+            numFirstInt = intCal.getUserInputFirstInt();
+            numSecondInt = intCal.getUserInputSecondInt();
+            userSelectedListInt = intCal.userOptionsListInt();
+            intCal.showEquationInt(numFirstInt, numSecondInt, userSelectedListInt);
+
+            userDecisionLoop();
+        }
+    }
+    // This will end program and while loop
+    if (userDecision == 0)
+    {
+        {
+            std::cout << "\nThank you for using the Calculator!";
+            std::cout << "\n         Have A Great Day!";
+            std::cout << "\n            ";
+        }
+    }
 }
 
 int main()
@@ -316,39 +353,5 @@ int main()
         intCal.showEquationInt(numFirstInt, numSecondInt, userSelectedListInt);
     }
 
-    userDecision = userDecisionLoop();
-    if (userDecision == 1)
-    {
-        calculatorUserOptions = calculatorOption();
-        if (calculatorUserOptions == 1) // Doubles
-        {                               // Same progress as the first if statements
-            numFirstDouble = doubleCal.getUserInputFirstDouble();
-            numSecondDouble = doubleCal.getUserInputSecondDouble();
-            userSelectedListDouble = doubleCal.userOptionsListDouble();
-            doubleCal.showEquationDouble(numFirstDouble, numSecondDouble, userSelectedListDouble);
-
-            std::cout << "\nWould you like to use the calculator again? *(1) for yes or *(0) no: ";
-            std::cin >> userDecision;
-        }
-
-        if (calculatorUserOptions == 2) // Ints
-        {                               // Same progress as the first if statements
-            numFirstInt = intCal.getUserInputFirstInt();
-            numSecondInt = intCal.getUserInputSecondInt();
-            userSelectedListInt = intCal.userOptionsListInt();
-            intCal.showEquationInt(numFirstInt, numSecondInt, userSelectedListInt);
-
-            std::cout << "\nWould you like to use the calculator again? *(1) for yes or *(0) no: ";
-            std::cin >> userDecision;
-        }
-    }
-    // This will end program and while loop
-    if (userDecision == 0)
-    {
-        {
-            std::cout << "\nThank you for using the Calculator!";
-            std::cout << "\n         Have A Great Day!";
-            std::cout << "\n            ";
-        }
-    }
+    userDecisionLoop();
 }
