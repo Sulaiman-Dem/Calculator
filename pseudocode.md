@@ -41,3 +41,5 @@
    Solution = So I came up with the idea of have two separate calculators for whole numbers and decimal numbers
 2. Had an issue with the "while" loop of whether the user wants to continue using the calculator since it was in the int main()
    Solution = I created a separate function for the while loop and made it so that the function would equal the userDecision and now it works perfectly
+3. I had an issue where my while loop would only loop twice and it would automatically end after the second usage of the program if the user wanted to use the program again
+   Solution = I created the if statements within the while loop and now it loops continuously until the user is finished with program
