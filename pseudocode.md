@@ -35,7 +35,7 @@
 4. Afterward the user is presented the list of operators and finally depending their choice the equation will be visual presented with the answer
 5. The loop function will trigger and ask the user if they want to use the calculator again if not the program will end
 
-### Issue
+### Issue :
 
 1. Figuring out how to implement modulus into this program.
    Solution = So I came up with the idea of have two separate calculators for whole numbers and decimal numbers
